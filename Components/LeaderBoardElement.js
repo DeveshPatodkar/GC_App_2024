@@ -8,7 +8,7 @@ const LeaderBoardElement = (props) => {
       <View style={styles.LeaderBoardElement}>
         {/* <View style={styles.LeaderBoardElementLeft}> */}
         <View style={styles.LeaderBoardElementText}>
-          <Text style={styles.LeaderBoardSNo}>4</Text>
+          <Text style={styles.LeaderBoardSNo}>{props.branchData.rank}</Text>
           <Image
             source={require("../assets/CSE_Logo.png")}
             style={styles.LeaderBoardLogo}
@@ -75,15 +75,14 @@ const styles = StyleSheet.create({
   LeaderBoardElementText: {
     flexDirection: "row",
     flex: 0.75,
-    padding:20,
-
+    padding: 20,
   },
-  branchname:{
-    flex:2
+  branchname: {
+    flex: 2,
   },
-  points:{
-    flex:0.75
-  }
+  points: {
+    flex: 0.75,
+  },
 });
 
 export default LeaderBoardElement;
