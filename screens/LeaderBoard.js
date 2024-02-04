@@ -9,7 +9,7 @@ export default function Leaderboard() {
       Score: 41735,
     },
     {
-      Name: "ECE+Meta",
+      Name: "ECE+META",
       Score: 32000,
     },
     {
@@ -17,23 +17,23 @@ export default function Leaderboard() {
       Score: 31700,
     },
     {
-      Name: "Mech",
-      Score: 3600,
+      Name: "MECH",
+      Score: 93600,
     },
     {
-      Name: "Civil",
+      Name: "CIVIL",
       Score: 3612,
     },
     {
-      Name: "MSC",
+      Name: "M.Sc",
       Score: 3900,
     },
     {
-      Name: "MTech",
+      Name: "M.Tech",
       Score: 3678,
     },
     {
-      Name: "PHD",
+      Name: "PhD.",
       Score: 3000,
     },
   ];
@@ -127,27 +127,18 @@ const styles = StyleSheet.create({
   },
   containertop1: {
     flex: 1,
-    // backgroundColor: "#099999",
     flexDirection: "column",
     justifyContent: "flex-end",
-    // borderWidth: 2,
-    // borderColor: "white",
   },
   containertop2: {
     flex: 1.25,
-    // backgroundColor: "#999999",
     flexDirection: "column",
     justifyContent: "flex-end",
-    // borderWidth: 2,
-    // borderColor: "white",
   },
   containertop3: {
     flex: 1,
-    // backgroundColor: "#999999",
     flexDirection: "column",
     justifyContent: "flex-end",
-    // borderWidth: 2,
-    // borderColor: "white",
   },
   number1top: {
     flex: 1,

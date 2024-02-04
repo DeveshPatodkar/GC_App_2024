@@ -32,11 +32,10 @@ const styles = StyleSheet.create({
   LeaderBoardElement: {
     flexDirection: "row",
     flex: 0.08,
-    backgroundColor: "#C4C4C4",
+    backgroundColor: "#252728",
     alignItems: "center",
-    // justifyContent:'center',
-    // justifyContent: "space-around",
     width: 343,
+    height: 72,
     borderRadius: 12,
   },
   LeaderBoardElementLeft: {
@@ -44,8 +43,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    // backgroundColor: "#0005",
-    // width: "50%",
     marginRight: "30%",
     marginLeft: "3%",
     padding: 10,
