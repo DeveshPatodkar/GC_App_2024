@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import VoteButton from "./VoteButton";
 
 function OngoingEventCard() {
   return (
@@ -36,9 +37,7 @@ function OngoingEventCard() {
           <Text style={styles.BottomTextGame}>Basketball</Text>
           <Text style={styles.BottomTextTeams}>ECE-META v/s CSE</Text>
         </View>
-        <TouchableOpacity style={styles.VisitButton}>
-          <Text style={{ color: "white", fontWeight: "bold" }}>Vote</Text>
-        </TouchableOpacity>
+        <VoteButton/>
       </View>
     </View>
   );
@@ -128,14 +127,5 @@ const styles = StyleSheet.create({
     margin: 9,
     marginTop: 38,
   },
-  VisitButton: {
-    backgroundColor: "rgb(212,36,119	)",
-    borderRadius: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: 70,
-    height: 50,
-    padding: 3,
-  },
+  
 });
