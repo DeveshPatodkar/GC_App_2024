@@ -9,7 +9,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import VoteButton from "./VoteButton";
 
-function OngoingEventCard() {
+function OngoingEventCard(props) {
   return (
     <View>
       <LinearGradient
@@ -23,8 +23,8 @@ function OngoingEventCard() {
           source={require("../assets/images/ECE-META.jpg")}
         />
         <Image />
-        <Text style={styles.LEFTscoreText}>4</Text>
-        <Text style={styles.RIGHTscoreText}>6</Text>
+        <Text style={styles.LEFTscoreText}>{props.scoreA}</Text>
+        <Text style={styles.RIGHTscoreText}>{props.scoreB}</Text>
         <Image
           style={styles.RightImageContainer}
           source={require("../assets/images/CSE.jpg")}
@@ -34,8 +34,8 @@ function OngoingEventCard() {
 
       <View style={styles.cardBottom}>
         <View>
-          <Text style={styles.BottomTextGame}>Basketball</Text>
-          <Text style={styles.BottomTextTeams}>ECE-META v/s CSE</Text>
+          <Text style={styles.BottomTextGame}>{props.gameName}</Text>
+          <Text style={styles.BottomTextTeams}>{props.teamA} v/s {props.teamB}</Text>
         </View>
         <VoteButton/>
       </View>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     shadowColor: "rgb(192, 9, 99)",
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 1,
-    shadowOpacity: 0.95,
+    shadowOpacity: 1,
 
     display: "flex",
     flexDirection: "row",
