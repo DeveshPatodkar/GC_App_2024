@@ -9,10 +9,6 @@ function TopMostCard(props) {
                 alt="Header Image" 
                 source={require('../assets/images/HeaderImage.jpg')}>
             </Image>
-            <View style={styles.ButtonContainer}>
-                <OngoingUpcomingButton>ONGOING</OngoingUpcomingButton>
-                <OngoingUpcomingButton>UPCOMING</OngoingUpcomingButton>
-            </View>
         </View>
     );
 }
@@ -30,10 +26,6 @@ const styles = StyleSheet.create({
         height: 0.12*deviceHeight,
         marginHorizontal: 0.04*deviceWidth,
         
-    },
-    ButtonContainer: {
-        flexDirection: 'row',
-        marginBottom: 24
     },
     TopContainer: { 
         marginTop: 32,
