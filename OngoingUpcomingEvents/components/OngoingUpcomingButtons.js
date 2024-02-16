@@ -2,30 +2,27 @@ import { View, Text, Pressable, StyleSheet, Dimensions } from 'react-native';
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from 'expo-linear-gradient';
 
-function OngoingUpcomingButton({ children, onPress }) {
+function OngoingUpcomingButton({ children, onPress, currentScreen, currentButton }) {
   return (
-    <View style={styles.buttonOuterContainer}>
-      <Pressable
-        style={({ pressed }) =>
-          pressed
-            ? [styles.buttonInnerContainer, styles.pressed]
-            : styles.buttonInnerContainer
-        }
-        onPress={onPress}
-      >
-
-        {/* <MaskedView maskElement={<Text>{children}</Text>}>
-          <LinearGradient
-            colors={["#d41d77", "white"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
-            <Text style={styles.buttonText}>{children}</Text>
-          </LinearGradient>
-        </MaskedView> */}
-
-        <Text style={styles.buttonText}>{children}</Text> 
-      </Pressable>
+    <View>
+        <Pressable
+          style={({ pressed }) =>
+            pressed
+              ? [styles.buttonInnerContainer, styles.pressed]
+              : styles.buttonInnerContainer
+          }
+          onPress={onPress}
+        >
+          <View style={styles.textContainer}>
+            <Text 
+              style={
+                currentScreen != currentButton
+                  ? styles.activeButton
+                  : styles.inactiveButton
+              }
+            >{children}</Text>
+          </View>
+        </Pressable>
     </View>
   );
 }
@@ -36,12 +33,11 @@ const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-  buttonOuterContainer: {
+  buttonInnerContainer: {
     borderRadius: 16,
     marginTop: 0.005*deviceHeight,
     overflow: 'hidden',
-  },
-  buttonInnerContainer: {
+    alignContent: 'center',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
@@ -49,13 +45,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: '12%',
     elevation: 2,
   },
-  buttonText: {
+  inactiveButton: {
     color: 'white',
     fontSize: 16,
-    textAlign:'center'
+    textAlign:'center',
+    textDecorationLine: 'underline',
+    lineHeight: 30
+  },
+  activeButton: {
+    color: '#d41d77',
+    fontSize: 16,
+    textAlign:'center',
+    textDecorationLine: 'underline',
+    lineHeight: 30
   },
   pressed: {
     opacity: 0.75,
-    color: '#d41d77'
+    color: '#d41d77',
   },
+  textContainer: {
+    borderBottomWidth: 1
+  }
 });

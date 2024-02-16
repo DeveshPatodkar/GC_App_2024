@@ -13,15 +13,15 @@ function renderOngoing() {
   setScreen(1);
 }
 function renderUpcoming() {
-  setScreen(2);
+  setScreen(0);
 }
 
 return (
       <SafeAreaView style={styles.container}>
         <TopMostCard/>
         <View style={styles.ButtonContainer}>
-            <OngoingUpcomingButton onPress={renderOngoing}>ONGOING</OngoingUpcomingButton>
-            <OngoingUpcomingButton onPress={renderUpcoming}>UPCOMING</OngoingUpcomingButton>
+            <OngoingUpcomingButton onPress={renderOngoing} currentScreen={screen} currentButton={0}>ONGOING</OngoingUpcomingButton>
+            <OngoingUpcomingButton onPress={renderUpcoming} currentScreen={screen} currentButton={1}>UPCOMING</OngoingUpcomingButton>
         </View>
         {screen == 1 ? (
           <OngoingScreen/>

@@ -35,7 +35,7 @@ function UpcomingEventCard(props) {
           <Text style={styles.BottomTextGame}>{props.gameName}</Text>
           <Text style={styles.BottomTextTeams}>{props.teamA} v/s {props.teamB}</Text>
         </View>
-        <VoteButton/>
+        {/* <VoteButton/> */}
       </View>
     </View>
   );

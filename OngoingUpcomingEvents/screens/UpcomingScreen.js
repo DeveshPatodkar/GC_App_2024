@@ -11,14 +11,14 @@ function UpcomingScreen(props) {
     
     const [upComingEvents, setUpcomingEvents] = useState([
         {
-            gameName: 'Basketball',
-            id: 'Basketball',
+            gameName: 'CSS Battle',
+            id: 'CSS Battle',
             teamA: 'ECE-META',
             teamB: 'CSE',
         },
         {
-            gameName: 'Cricket',
-            id: 'Cricket',
+            gameName: 'Monoact',
+            id: 'Monoact',
             teamA: 'ECE-META',
             teamB: 'CSE',
         },
