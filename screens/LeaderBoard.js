@@ -2,6 +2,16 @@ import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import LeaderBoardElement from "../components/LeaderBoardElement";
 
+const logoPaths = {
+  CSE: require("../assets/logos/CSE.png"),
+  EE: require("../assets/logos/EE.png"),
+  ECEMETA: require("../assets/logos/ECE+META.png"),
+  CIVIL: require("../assets/logos/CIVIL.png"),
+  MECH: require("../assets/logos/MECH.png"),
+  MSc: require("../assets/logos/MSc.png"),
+  MTech: require("../assets/logos/MTech.png"),
+  PhD: require("../assets/logos/PhD.png"),
+};
 export default function Leaderboard() {
   const BranchesData = [
     {
@@ -10,7 +20,7 @@ export default function Leaderboard() {
     },
     {
       Name: "ECE+META",
-      Score: 32000,
+      Score: 53200,
     },
     {
       Name: "EE",
@@ -33,7 +43,7 @@ export default function Leaderboard() {
       Score: 3678,
     },
     {
-      Name: "PhD.",
+      Name: "PhD",
       Score: 3000,
     },
   ];
@@ -46,7 +56,7 @@ export default function Leaderboard() {
     // console.log(item);
     return (
       <View style={{ padding: 5 }}>
-        <LeaderBoardElement branchData={item} />
+        <LeaderBoardElement branchData={item} logoPaths={logoPaths} />
       </View>
     );
   };
@@ -59,7 +69,7 @@ export default function Leaderboard() {
               <FontAwesome5 name="crown" size={22} color="#ADABA1" />
             </View>
             <Image
-              source={require("../assets/ECElogo.png")}
+              source={logoPaths[top3[1].Name.replace(".", "").replace("+", "")]}
               style={{ width: 100, height: 100 }}
             />
           </View>
@@ -74,7 +84,7 @@ export default function Leaderboard() {
               <FontAwesome5 name="crown" size={24} color="#FFAA00" />
             </View>
             <Image
-              source={require("../assets/CSElogo.png")}
+              source={logoPaths[top3[0].Name.replace(".", "").replace("+", "")]}
               style={{ width: 100, height: 100 }}
             />
           </View>
@@ -89,7 +99,7 @@ export default function Leaderboard() {
               <FontAwesome5 name="crown" size={20} color="#CB7E32" />
             </View>
             <Image
-              source={require("../assets/EElogo.png")}
+              source={logoPaths[top3[2].Name.replace(".", "").replace("+", "")]}
               style={{ width: 100, height: 100 }}
             />
           </View>
