@@ -10,7 +10,11 @@ const LeaderBoardElement = (props) => {
         <View style={styles.LeaderBoardElementText}>
           <Text style={styles.LeaderBoardSNo}>{props.branchData.rank}</Text>
           <Image
-            source={require("../assets/CSE_Logo.png")}
+            source={
+              props.logoPaths[
+                props.branchData.Name.replace(".", "").replace("+", "")
+              ]
+            }
             style={styles.LeaderBoardLogo}
           />
         </View>
