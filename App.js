@@ -5,7 +5,7 @@ import OngoingScreen from './screens/OngoingScreen';
 import UpcomingScreen from './screens/UpcomingScreen';
 import TopMostCard from './components/TopMostCard';
 import OngoingUpcomingButton from './components/OngoingUpcomingButtons';
-
+import Leaderboard from "./screens/Leaderboard";
 export default function App() {
 
 const [screen, setScreen] = useState(1);
@@ -29,8 +29,7 @@ return (
           <UpcomingScreen/>
         )}
       </SafeAreaView>
-  );
-}
+
 
 const styles = StyleSheet.create({
   container: {
