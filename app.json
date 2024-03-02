@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "GC_App_2024",
-    "slug": "GC_App_2024",
+    "name": "OngoingUpcomingEvents",
+    "slug": "OngoingUpcomingEvents",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
