@@ -9,6 +9,10 @@ import OngoingUpcomingButton from "./components/OngoingUpcomingButtons";
 //LeaderBoard Screen
 // import Leaderboard from "./screens/Leaderboard";
 
+//update score Admin
+// import AdminOngoingScreen from './screens/AdminOngoingScreen';
+// instead of Ongoing screen
+
 export default function App() {
   const [screen, setScreen] = useState(1);
   function renderOngoing() {
