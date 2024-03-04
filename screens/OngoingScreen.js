@@ -84,8 +84,6 @@ function OngoingScreen(props) {
         }
         fetchData();
     },[])
-    
-    
 
     return(
         <View style={styles.eventsContainer}>

@@ -9,7 +9,31 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import VoteButton from "./VoteButton";
 
+    const logoPaths = {
+        CSE: require("../assets/logos/CSE.png"),
+        EE: require("../assets/logos/EE.png"),
+        ECEMETA: require("../assets/logos/ECE+META.png"),
+        CIVIL: require("../assets/logos/CIVIL.png"),
+        ME: require("../assets/logos/MECH.png"),
+        MSc: require("../assets/logos/MSc.png"),
+        MTech: require("../assets/logos/MTech.png"),
+        PhD: require("../assets/logos/PhD.png"),
+    };
+    const setProperTeamName =((team)=>{
+      if(team ==='CS')
+      team = "CSE";
+      if(team === 'MM' || team==='ECE-META' || team==='ECE' || team === 'EC')
+      team = "ECEMETA";
+      if(team==='ME' || team==='MECH')
+      team = "ME";
+      
+      return team;
+    });
+
 function UpcomingEventCard(props) {
+  const teamA = setProperTeamName(props.teamA);
+  const teamB = setProperTeamName(props.teamB);
+
   return (
     <View>
       <LinearGradient
@@ -20,12 +44,12 @@ function UpcomingEventCard(props) {
         style={styles.cardTop}>
         <Image
           style={styles.LeftImageContainer}
-          source={require("../assets/logos/"+teamA+".png")}
+          source={logoPaths[teamA]}
         />
         <Image />
         <Image
           style={styles.RightImageContainer}
-          source={require("../assets/logos/"+teamB+".png")}
+          source={logoPaths[teamB]}
         />
         <Image />
       </LinearGradient>

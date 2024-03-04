@@ -60,11 +60,13 @@ function OngoingScreen(props) {
                     console.log("item11",item1)
                     const teamA = item1.data.points ? item1.data.points?.teamA : item1.data.pointsTable?.teamA;
                     const teamB = item1.data.points ? item1.data.points?.teamB : item1.data.pointsTable?.teamB;
+                    const idx = item1.data.details.title.split(' ').findIndex(word => word.toLowerCase() === 'vs');
+                    const gameName= item1.data.details.title.split(' ').slice(0, idx-1).join(' ');
                     console.log("teamA",teamA);
                     return {
                         details:item1.data.details,
                         status:item1.data.status,
-                        gameName: item1.data.details.title,
+                        gameName: gameName,
                         id: item1.data.details.title.split(" ").join('') + item1.subEventId.split(" ").join(''),
                         // teamA: item1.subEventId.split(" vs ")[0],
                         // teamB: item1.subEventId.split(" vs ")[1],
@@ -85,8 +87,6 @@ function OngoingScreen(props) {
         }
         fetchData();
     },[])
-    
-    
 
     return(
         <View style={styles.eventsContainer}>
