@@ -20,12 +20,12 @@ function UpcomingEventCard(props) {
         style={styles.cardTop}>
         <Image
           style={styles.LeftImageContainer}
-          source={require("../assets/images/ECE-META.jpg")}
+          source={require("../assets/logos/"+teamA+".png")}
         />
         <Image />
         <Image
           style={styles.RightImageContainer}
-          source={require("../assets/images/CSE.jpg")}
+          source={require("../assets/logos/"+teamB+".png")}
         />
         <Image />
       </LinearGradient>
