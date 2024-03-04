@@ -64,14 +64,14 @@ import {
           style={styles.cardTop}>
           <Image
             style={styles.LeftImageContainer}
-            source={require("../assets/images/ECE-META.jpg")}
+            source={require("../assets/logos/"+teamA+".png")}
           />
           <Image />
           <Text style={styles.LEFTscoreText}>{props.scoreA}</Text>
           <Text style={styles.RIGHTscoreText}>{props.scoreB}</Text>
           <Image
             style={styles.RightImageContainer}
-            source={require("../assets/images/CSE.jpg")}
+            source={require("../assets/logos/"+teamB+".png")}
           />
           <Image />
         </LinearGradient>
